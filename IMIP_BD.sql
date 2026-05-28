@@ -11,7 +11,7 @@ CREATE TABLE aluno (
 CREATE TABLE professor (
     id_professor INT PRIMARY KEY AUTO_INCREMENT,
     matricula_professor VARCHAR(20) UNIQUE NOT NULL,
-    cpf VARCHAR(14) UNIQUE NOT NULL, -- Regra 2
+    cpf VARCHAR(14) UNIQUE NOT NULL,
     telefone VARCHAR(20),
     email VARCHAR(100) UNIQUE NOT NULL
 );
@@ -281,7 +281,7 @@ SELECT SUM(recompensa) AS total_estrelas_ganhas FROM progresso;
 
 SELECT AVG(idade) AS media_idade_alunos FROM aluno;
 SELECT AVG(tempo_jogado_minutos) AS media_tempo_sessao FROM sessao;
-SELECT AVG(recompensa) AS media_estrelas_por_nivel FROM progresso;
+SELECT AVG(recompensa) AS media_estrelas_por_nivel FROM progresso;	
 
 UPDATE aluno SET idade = 6 WHERE id_aluno = 1;
 UPDATE aluno SET idade = 7 WHERE id_aluno = 2;
